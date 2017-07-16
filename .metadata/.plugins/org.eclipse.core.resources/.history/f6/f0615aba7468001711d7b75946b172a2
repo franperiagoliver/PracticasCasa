@@ -1,0 +1,31 @@
+package com.house.study.java_.first.steps.poo;
+
+import java.io.PrintStream;
+
+public class ConstantsTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Employees {
+
+	private String name;
+	private String department;
+
+	public Employees(String name) {
+		this.name = name;
+		department = "Administration";
+	}
+
+	public void changeDepartment(String department) {
+		this.department = department;
+	}
+	
+	public String getInformation() {
+		return "The name's " + name + " and the department's " + department;
+	}
+
+}

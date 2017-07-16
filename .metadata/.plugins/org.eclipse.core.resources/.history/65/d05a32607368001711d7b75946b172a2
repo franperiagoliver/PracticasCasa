@@ -1,0 +1,13 @@
+package com.house.study.java_.first.steps.poo;
+
+public class ConstantsTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Employee {
+	
+}

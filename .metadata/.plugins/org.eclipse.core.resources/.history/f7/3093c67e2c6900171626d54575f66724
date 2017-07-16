@@ -1,0 +1,19 @@
+package com.house.study.java_.first.steps.poo;
+
+import javax.swing.JOptionPane;
+
+public class UsoVehiculo {
+
+	public static void main(String[] args) {
+		Coche miCoche = new Coche();
+		miCoche.establecerColor(JOptionPane.showInputDialog("Introduce color"));
+		System.out.println(miCoche.decirDatosGenerales());
+		System.out.println(miCoche.decirColor());
+		miCoche.configurarAsientos(JOptionPane.showInputDialog("¿Tiene asientos de cuero?"));
+		System.out.println(miCoche.decirAsientos());
+		miCoche.configurarClimatizador(JOptionPane.showInputDialog("¿Tiene climatizador?"));
+		System.out.println(miCoche.decirClimatizador());
+		System.out.println(miCoche.decirPesoCoche());
+		System.out.printf("El precio final del coche es %s.", miCoche.decirPrecioCoche());
+	}
+}

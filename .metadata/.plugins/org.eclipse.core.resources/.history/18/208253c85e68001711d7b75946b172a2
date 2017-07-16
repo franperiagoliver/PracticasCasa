@@ -1,0 +1,13 @@
+package poo;
+
+public class Uso_Coche {
+
+	public static void main(String[] args) {
+		Coche miCoche = new Coche();
+		
+		miCoche.establecerColor("amarillo");
+		
+		System.out.println(miCoche.decirColor());
+	}
+
+}

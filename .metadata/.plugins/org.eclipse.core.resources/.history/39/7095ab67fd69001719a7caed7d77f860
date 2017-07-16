@@ -1,0 +1,43 @@
+package com.house.study.java_.first.steps.poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class PersonManager {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Employee2 {
+
+	public Employee2(String name, double salary, int year, int month, int day) {
+		this.name = name;
+		this.salary = salary;
+		GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
+		hire = calendar.getTime();
+		++nextId;
+		id = nextId;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public Date getHireDay() {
+		return hire;
+	}
+
+	public void increaseSalary(double percentage) {
+		double increase = salary * percentage / 100;
+		salary += increase;
+	}
+
+	private double salary;
+	private Date hire;
+	private Integer id;
+	private static Integer nextId = 1;
+}

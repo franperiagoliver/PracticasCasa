@@ -1,0 +1,43 @@
+
+public class ArrayBidim {
+
+	public static void main(String[] args) {
+		
+		int [][] matriz = new int[4][5];
+		
+		matriz[0][0] = 1;
+		matriz[0][1] = -11;
+		matriz[0][2] = 54;
+		matriz[0][3] = 258;
+		matriz[0][4] = 357;
+		
+		matriz[1][0] = -54;
+		matriz[1][1] = -987;
+		matriz[1][2] = 200;
+		matriz[1][3] = 10;
+		matriz[1][4] = 1325;
+		
+		matriz[2][0] = 19;
+		matriz[2][1] = 15;
+		matriz[2][2] = 8;
+		matriz[2][3] = -3;
+		matriz[2][4] = 2;
+		
+		matriz[3][0] = 656;
+		matriz[3][1] = -78;
+		matriz[3][2] = 98;
+		matriz[3][3] = 23;
+		matriz[3][4] = -32;
+		
+		for (int i = 0; i < 4; i++) {
+			
+			System.out.println();
+			for (int j = 0; j < 5; j++) {
+				
+				System.out.println(matriz[i][j]+" ");
+				
+			}
+		}
+	}
+
+}

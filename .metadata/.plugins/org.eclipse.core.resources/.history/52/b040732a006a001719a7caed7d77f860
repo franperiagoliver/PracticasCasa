@@ -1,0 +1,84 @@
+package com.house.study.java_.first.steps.poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class PersonManager {
+
+	public static void main(String[] args) {
+		
+		Person[] people = new Person[2];
+		
+		people[0] = new Employee2("Luis Conde", 50000, 2010, 2, 25);
+		people[1] = new Student("Ana López", "History of Art");
+
+	}
+
+}
+
+abstract class Person {
+	
+	private String name;
+	
+	public Person(String name) {
+		
+		this.name = name;
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public abstract String getDescription();
+	
+
+}
+
+class Employee2 extends Person{
+
+	public Employee2(String name, double salary, int year, int month, int day) {
+		super(name);
+		this.salary = salary;
+		GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
+		hire = calendar.getTime();
+		++nextId;
+		id = nextId;
+	}
+	
+	public String getDescription() {
+		return "This employee has an ID = " + id + " with a salary = " + salary;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public Date getHireDay() {
+		return hire;
+	}
+
+	public void increaseSalary(double percentage) {
+		double increase = salary * percentage / 100;
+		salary += increase;
+	}
+
+	private double salary;
+	private Date hire;
+	private Integer id;
+	private static Integer nextId = 1;
+}
+
+class Student extends Person{
+	
+	private String degree;
+	
+	public Student(String name, String degree){
+		super(name);
+		this.degree = degree;
+	}
+	
+	public String getDescription() {
+		return "This student is studying the degree of " + degree;
+	}
+}

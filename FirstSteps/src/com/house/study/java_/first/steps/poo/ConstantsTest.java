@@ -1,0 +1,51 @@
+package com.house.study.java_.first.steps.poo;
+
+public class ConstantsTest {
+
+	public static void main(String[] args) {
+
+		Employees employee1 = new Employees("Paco");
+		Employees employee2 = new Employees("Lucía");
+		Employees employee3 = new Employees("Antonio");
+		Employees employee4 = new Employees("María");
+		employee1.changeDepartment("People");
+		System.out.println(employee1.getInformation());
+		System.out.println(employee2.getInformation());
+		System.out.println(employee3.getInformation());
+		System.out.println(employee4.getInformation());
+		
+		System.out.println(Employees.getNextId());
+	}
+
+}
+
+class Employees {
+
+	private Integer id;
+	private final String name; // The name of employee stand unalterable during the program.
+	private String department;
+	private static Integer nextId = 1;
+
+	public Employees(String name) {
+		id = nextId;
+		nextId++;
+		this.name = name;
+		department = "Administration";
+	}
+
+	public void changeDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getInformation() {
+		return "The name's " + name + " and the department's " + department + "and your ID is " + id;
+	}
+	
+	public static String getNextId() {
+		
+		return "Next ID is: " + nextId;
+	}
+	
+	
+
+}

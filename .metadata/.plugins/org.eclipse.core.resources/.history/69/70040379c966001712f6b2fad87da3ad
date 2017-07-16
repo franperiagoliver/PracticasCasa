@@ -1,0 +1,15 @@
+package poo;
+
+public class Clase {
+		int ruedas;
+		int largo;
+		int ancho;
+		int motor;
+		int peso;
+		
+		public Coche() {
+			
+		}
+}
+
+

@@ -1,0 +1,14 @@
+
+public class DeclaracionesOperadores {
+
+	public static void main(String[] args) {
+		
+		final int c=5;
+		
+		c=6;
+		
+		System.out.println(c);
+
+	}
+
+}

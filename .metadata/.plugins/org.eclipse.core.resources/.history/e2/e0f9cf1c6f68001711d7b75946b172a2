@@ -1,0 +1,52 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class EmployeeManager {
+
+	public static void main(String[] args) {
+		
+		Employee employee1 = new Employee("Francisco Periago", 120000, 2017, 10, 18);
+		Employee employee2 = new Employee("Adrián Sánchez", 250000, 1995, 6, 2);
+		Employee employee3 = new Employee("Antonio Pérez", 85000, 2002, 3, 15);
+		
+		employee1.increaseSalary(5);
+		employee2.increaseSalary(15);
+		employee3.increaseSalary(1);
+		
+		System.out.printf("Name: %s, Salary: %s, Hire day: %s", employee1.getName(), employee1.getSalary(), employee1.getHireDay());
+	}
+
+}
+
+class Employee {
+	
+	public Employee (String name, double salary, int year, int month, int day) {
+		this.name = name;
+		this.salary = salary;
+		GregorianCalendar calendar = new GregorianCalendar(year, month-1, day);
+		hire = calendar.getTime();
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+	
+	public Date getHireDay() {
+		return hire;
+	}
+	
+	public void increaseSalary(double percentage) {
+		double increase = salary*percentage/100;
+		salary += increase;
+	}
+	
+	private String name;
+	private double salary;
+	private Date hire;
+}

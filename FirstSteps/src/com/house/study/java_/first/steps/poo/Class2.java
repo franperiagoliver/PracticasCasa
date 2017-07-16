@@ -1,0 +1,14 @@
+package com.house.study.java_.first.steps.poo;
+
+import com.house.study.java_.first.steps.tests.Class3;
+
+public class Class2 {
+
+	public static void main(String[] args) {
+		
+		Class1 myobj = new Class1();
+		Class3 myobj2 = new Class3();
+		
+	}
+
+}

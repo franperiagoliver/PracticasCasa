@@ -1,0 +1,13 @@
+package poo;
+
+public class PruebasConstantes {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Employee {
+	
+}

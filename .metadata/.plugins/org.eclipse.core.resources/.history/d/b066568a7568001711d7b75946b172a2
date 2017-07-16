@@ -1,0 +1,37 @@
+package com.house.study.java_.first.steps.poo;
+
+public class ConstantsTest {
+
+	public static void main(String[] args) {
+
+		Employees employee1 = new Employees("Paco");
+		Employees employee2 = new Employees("Lucía");
+		employee1.changeDepartment("People");
+		employee1.changeName("Luís");
+		System.out.println(employee1.getInformation() + "\n" + employee2.getInformation() + "\n");
+	}
+
+}
+
+class Employees {
+
+	private final String name;
+	private String department;
+
+	public Employees(String name) {
+		this.name = name;
+		department = "Administration";
+	}
+
+	public void changeDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getInformation() {
+		return "The name's " + name + " and the department's " + department;
+	}
+	
+	public void changeName(String name) {
+		this.name = name;	
+	}
+}

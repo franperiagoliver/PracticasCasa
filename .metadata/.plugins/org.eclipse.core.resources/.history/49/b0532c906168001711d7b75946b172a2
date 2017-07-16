@@ -1,0 +1,34 @@
+package poo;
+
+public class Coche {
+
+	private int ruedas, largo, ancho, motor, pesoPlataforma, pesoTotal;
+	private String color;
+	private boolean asientosCuero, climatizador;
+
+	public Coche() {
+		ruedas = 4;
+		largo = 2000;
+		ancho = 300;
+		motor = 1600;
+		pesoPlataforma = 500;
+	}
+
+	public String decirDatosGenerales() { // GETTER
+		return "La plataforma del vehículos tiene " + ruedas +
+				" ruedas. Mide " + largo/1000 + " metros, con un"
+						+ " ancho de " + ancho + " centrímetros y"
+						+ " un peso de " + pesoPlataforma + " kg.";
+	}
+	
+	
+
+	public void establecerColor(String colorCoche) { // SETTER
+		this.color = colorCoche;
+	}
+
+	public String decirColor() {
+		return "El color del coche es " + color;
+	}
+
+}

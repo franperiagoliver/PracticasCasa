@@ -1,0 +1,18 @@
+package poo;
+
+public class EmployeeManager {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class Employee {
+	public Employee (String name, double salary, Integer year, Integer month, Integer day) {
+		
+	}
+	
+	
+}

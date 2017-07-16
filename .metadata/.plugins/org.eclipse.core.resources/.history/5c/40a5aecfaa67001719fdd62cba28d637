@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class UsoArrays2 {
+
+	public static void main(String[] args) {
+		
+		String [] paises = new String[8];
+//		paises[0] = "España";
+//		paises[1] = "Venezuela";
+//		paises[2] = "Méjico";
+//		paises[3] = "Colombia";
+//		paises[4] = "Perú";
+//		paises[5] = "Chile";
+//		paises[6] = "Argentina";
+//		paises[7] = "Ecuador";
+		
+//		String [] paises = {"España","Venezuela","México","Colombia","Perú","Chile","Argentina"};
+		
+//		for (int i = 0; i < paises.length; i++) {
+//			System.out.printf("País %s %s \n", (i+1), paises[i]);
+//		}
+		
+		for (int i = 0; i < 8; i++) {
+			paises[i] = JOptionPane.showInputDialog("Introduce país %s", (i+1));
+		}
+		
+		for (String elemento:paises) {
+			System.out.printf("País: %s \n", elemento);
+		}
+	}
+
+}
