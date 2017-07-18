@@ -1,5 +1,7 @@
 package com.house.study.java_.graphics;
 
+import java.awt.Frame;
+
 import  javax.swing.JFrame;
 
 public class CreatingFrames {
@@ -20,8 +22,13 @@ class MyFrame extends JFrame {
 	
 	public MyFrame() {
 		
-		setSize(500, 300);
-		
+//		setSize(500, 300);
+//		setLocation(500,300);
+		setBounds(550, 250, 550, 250);
+		//setResizable(false);
+		//setExtendedState(Frame.MAXIMIZED_BOTH);
+		//setExtendedState(6);
+		setTitle("My application");
 	}
 	
 }
