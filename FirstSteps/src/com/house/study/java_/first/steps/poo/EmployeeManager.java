@@ -38,9 +38,13 @@ public class EmployeeManager {
 		Leadership bossFinances = (Leadership) myEmployees[5];
 
 		bossFinances.setIncentive(55000);
-		
-		System.out.println(bossFinances.takeDecission("Getting more days of vacations to the employees"));
 
+		System.out.println(bossFinances.takeDecission("Getting more days of vacations to the employees"));
+		
+		System.out.println("The boss " + bossFinances.getName() + " has a bonus of " + bossFinances.establishBonus(500) + " dollars.");
+		
+		System.out.println(myEmployees[3].getName() + " has a bonus of " + myEmployees[3].establishBonus(200));
+		
 		// for (int i = 0; i < myEmployees.length; i++) {
 		// myEmployees[i].increaseSalary(5);
 		// System.out.printf("Name: %s, Salary: %s, Hire day: %s \n",
@@ -48,32 +52,33 @@ public class EmployeeManager {
 		// myEmployees[i].getHireDay());
 		// }
 
-//		Employee commercialBoss = new Leadership("Sandra", 85000, 2012, 5, 5);
-//		Comparable example = new Employee("Elisabeth", 95000, 2011, 6, 7);
-//		
-//		if (commercialBoss instanceof Employee) {
-//			System.out.println("It's Leadership type.");
-//		}
-//		
-//		if (example instanceof Comparable) {
-//			System.out.println("It implements Comparable interface.");
-//		}
+		// Employee commercialBoss = new Leadership("Sandra", 85000, 2012, 5, 5);
+		// Comparable example = new Employee("Elisabeth", 95000, 2011, 6, 7);
+		//
+		// if (commercialBoss instanceof Employee) {
+		// System.out.println("It's Leadership type.");
+		// }
+		//
+		// if (example instanceof Comparable) {
+		// System.out.println("It implements Comparable interface.");
+		// }
 
 		for (Employee employee : myEmployees) {
 			employee.increaseSalary(5);
 		}
-		
+
 		Arrays.sort(myEmployees);
-		
-		for (Employee employee2: myEmployees) {
-			System.out.println("Name: " + employee2.getName() + " Salary: " + employee2.getSalary() + " Hire day: " + employee2.getHireDay() + ".");
+
+		for (Employee employee2 : myEmployees) {
+			System.out.println("Name: " + employee2.getName() + " Salary: " + employee2.getSalary() + " Hire day: "
+					+ employee2.getHireDay() + ".");
 		}
-	
+
 	}
 
 }
 
-class Employee implements Comparable {
+class Employee implements Comparable, Worker {
 
 	public Employee(String name, double salary, int year, int month, int day) {
 		this.name = name;
@@ -104,17 +109,16 @@ class Employee implements Comparable {
 	}
 
 	public int compareTo(Object myObject) {
-		
+
 		Employee otherEmployee = (Employee) myObject;
-		
+
 		if (this.salary < otherEmployee.salary) {
 			return -1;
 		}
-		
+
 		if (this.salary > otherEmployee.salary) {
 			return 1;
-		}
-		else {
+		} else {
 			return 0;
 		}
 	}
@@ -122,7 +126,13 @@ class Employee implements Comparable {
 	private String name;
 	private double salary;
 	private Date hire;
+	
+	public double establishBonus(double gratification) {
 		
+		return Worker.bonusBase+gratification;
+		
+	}
+
 }
 
 class Leadership extends Employee implements Boss {
@@ -134,8 +144,9 @@ class Leadership extends Employee implements Boss {
 		super(name, salary, year, month, day);
 
 	}
-	
+
 	public String takeDecission(String decission) {
+		
 		return "A member of the Leadership have took the decission of: " + decission;
 	}
 
@@ -148,6 +159,11 @@ class Leadership extends Employee implements Boss {
 
 		double bossSalary = super.getSalary();
 		return bossSalary + incentive;
+	}
+
+	public double establishBonus(double gratification) {
+		double bonus = 2000;
+		return Worker.bonusBase+gratification+bonus;
 	}
 
 }
