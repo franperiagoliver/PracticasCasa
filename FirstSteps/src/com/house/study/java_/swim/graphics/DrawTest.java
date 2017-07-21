@@ -1,4 +1,4 @@
-package com.house.study.java_.graphics;
+package com.house.study.java_.swim.graphics;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
