@@ -8,7 +8,7 @@ public class Model {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ModelFrame modelFrame = new ModelFrame();
+		PassFrame modelFrame = new PassFrame();
 		modelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		modelFrame.setVisible(true);
 
@@ -17,9 +17,9 @@ public class Model {
 }
 
 @SuppressWarnings("serial")
-class ModelFrame extends JFrame {
+class PassFrame extends JFrame {
 
-	public ModelFrame() {
+	public PassFrame() {
 
 		setTitle("Prueba acciones");
 		setBounds(600, 350, 600, 300);
