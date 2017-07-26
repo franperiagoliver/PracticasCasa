@@ -18,7 +18,7 @@ public class PasswordField {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		PassFrame passFrame = new PassFrame();
+		RadioFrame2 passFrame = new RadioFrame2();
 		passFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
@@ -26,9 +26,9 @@ public class PasswordField {
 }
 
 @SuppressWarnings("serial")
-class PassFrame extends JFrame {
+class CheckFrame extends JFrame {
 
-	public PassFrame() {
+	public CheckFrame() {
 
 		setBounds(400, 300, 550, 400);
 
